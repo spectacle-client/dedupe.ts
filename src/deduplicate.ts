@@ -34,6 +34,7 @@ export function deduplicate<D extends {}>(entity: CacheNames, data: D): D | D & 
         case CacheNames.Role:
         case CacheNames.Stage:
         case CacheNames.User:
+        case CacheNames.Reaction:
             return data;
 
         case CacheNames.Channel:
@@ -61,13 +62,6 @@ export function deduplicate<D extends {}>(entity: CacheNames, data: D): D | D & 
         case CacheNames.VoiceState:
             pathConfig = [
                 [CacheNames.Member, "member", [["user", "id"]], ["guild_id", "dm"]]
-            ];
-            break;
-
-        case CacheNames.Reaction:
-            pathConfig = [
-                [CacheNames.Member, "member", [["user", "id"]], ["guild_id", "dm"]],
-                [CacheNames.Emoji, "emoji", [["id"]]]
             ];
             break;
 
