@@ -1,0 +1,42 @@
+{
+  "name": "@spectacle-client/dedupe.ts",
+  "version": "0.1.0",
+  "description": "A Typescript package to deduplicate Discord API objects for efficient caching",
+  "keywords": [
+    "discord",
+    "api",
+    "wrapper",
+    "spectacles",
+    "cache"
+  ],
+  "repository": "https://github.com/spectacle-client/dedupe.ts",
+  "bugs": "https://github.com/spectacle-client/dedupe.ts/issues",
+  "author": "Sammy#1001",
+  "license": "GPL-3.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist",
+    "scripts"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prepack": "yarn build",
+    "publish": "npm publish"
+  },
+  "dependencies": {
+    "discord-api-types": "^0.37.12"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.4",
+    "typescript": "^4.8.4"
+  }
+}
