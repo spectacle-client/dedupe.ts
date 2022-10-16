@@ -1,1 +1,1 @@
-export { deduplicate } from './deduplicate.js';
+export { Deduplicator } from './deduplicator.js';
